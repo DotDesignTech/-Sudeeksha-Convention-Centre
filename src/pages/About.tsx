@@ -27,15 +27,23 @@ const About = () => (
           className="font-heading text-3xl md:text-4xl text-center text-primary mb-6">Our Story</motion.h2>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}
           className="font-subheading text-base md:text-lg text-muted-foreground leading-relaxed mb-6 text-center">
-          Sudeeksha Convention Centre stands as a beacon of elegance and hospitality in the heart of Bangalore. Born from a vision to create a venue that embodies the grandeur of Indian celebrations, we have grown into one of the city's most sought-after destinations for weddings and events.
+          <span className="font-semibold text-primary">Memories To Last A Lifetime:</span> Sudeeksha Convention Centre is a gorgeous and ideal setting in Bangalore for your big day! Our reception hall provides a perfect backdrop to your wedding.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}
           className="text-muted-foreground leading-relaxed mb-6 text-center">
-          Our gorgeous ballroom, holding up to 500 guests for a wedding reception, boasts gorgeous chandeliers along with beautiful high ceilings providing the perfect venue for that unforgettable wedding. The modern upscale decor combined with traditional Indian warmth creates an ambiance that is truly unmatched.
+          We can host events up to 1500 guests in our gorgeous ballroom for your wedding ceremonies, receptions &amp; mehendi. Sudeeksha Convention Centre has been sought after for its grand ballroom and modern upscale decor.
         </motion.p>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}
+          className="text-muted-foreground leading-relaxed mb-6 text-center">
+          The Hall, holding up to 500 guests for a wedding reception, boasts gorgeous chandeliers along with beautiful high ceilings providing the perfect venue for that unforgettable wedding.
+        </motion.p>
+        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={4}
+          className="text-muted-foreground leading-relaxed mb-6 text-center">
+          From large and lavish wedding extravaganzas to small and intimate affairs of anniversaries or birthday parties, Sudeeksha Convention Centre will provide the perfect venue to accommodate your celebratory needs.
+        </motion.p>
+        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={5}
           className="text-muted-foreground leading-relaxed text-center">
-          From large and lavish wedding extravaganzas to small and intimate affairs of anniversaries or birthday parties, Sudeeksha Convention Centre provides the perfect venue to accommodate your celebratory needs. Our banquet rooms and event spaces accommodate smaller intimate events with a minimum of 25 guests up to 1500 guests for larger receptions.
+          Our Banquet Rooms and Event Spaces will accommodate smaller intimate events with a minimum of 25 guests up to 1500 guests for larger receptions.
         </motion.p>
         <HeritageSeparator />
       </div>

@@ -34,8 +34,15 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-lg text-gold mb-4">Our Services</h4>
           <ul className="space-y-2 text-sm">
-            {["Wedding Ceremony", "Reception", "Anniversary", "Birthday Party", "Mehendi Ceremony", "Corporate Events"].map((s) => (
-              <li key={s}>{s}</li>
+            {[
+              { label: "Wedding", path: "/services/wedding" },
+              { label: "Corporate", path: "/services/corporate" },
+              { label: "Occasional Events", path: "/services/occasional-events" },
+              { label: "Other Events", path: "/services/other-events" },
+            ].map((s) => (
+              <li key={s.label}>
+                <Link to={s.path} className="hover:text-gold transition-colors">{s.label}</Link>
+              </li>
             ))}
           </ul>
         </div>

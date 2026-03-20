@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Wedding from "./pages/services/Wedding";
+import Corporate from "./pages/services/Corporate";
+import OccasionalEvents from "./pages/services/OccasionalEvents";
+import OtherEvents from "./pages/services/OtherEvents";
 import Venue from "./pages/Venue";
 import Gallery from "./pages/Gallery";
 import Booking from "./pages/Booking";
@@ -26,6 +30,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/wedding" element={<Wedding />} />
+            <Route path="/services/corporate" element={<Corporate />} />
+            <Route path="/services/occasional-events" element={<OccasionalEvents />} />
+            <Route path="/services/other-events" element={<OtherEvents />} />
             <Route path="/venue" element={<Venue />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/booking" element={<Booking />} />
