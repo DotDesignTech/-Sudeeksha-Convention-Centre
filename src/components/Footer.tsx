@@ -77,7 +77,7 @@ const Footer = () => (
       </p>
       <p className="text-center text-xs text-gold-light/30 mt-1">
         Designed & Developed by{" "}
-        <a href="https://www.dotdesigntech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+        <a href="https://www.dotdesigntech.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-gold transition-colors hover:text-gold-light">
           Dot Design
         </a>
       </p>
