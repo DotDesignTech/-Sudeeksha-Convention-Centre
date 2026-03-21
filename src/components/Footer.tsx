@@ -75,6 +75,12 @@ const Footer = () => (
       <p className="text-center text-xs text-gold-light/50">
         © {new Date().getFullYear()} Sudeeksha Convention Centre. All rights reserved.
       </p>
+      <p className="text-center text-xs text-gold-light/30 mt-1">
+        Designed & Developed by{" "}
+        <a href="https://www.dotdesigntech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+          Dot Design
+        </a>
+      </p>
     </div>
   </footer>
 );
