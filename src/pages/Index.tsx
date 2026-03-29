@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { Users, Wind, BedDouble, Car, Zap, UserCheck, Heart, Utensils, Headphones, Star, Trophy, CalendarCheck, SmilePlus, CheckCircle2, MapPin, Phone, ChevronRight } from "lucide-react";
 import HeritageSeparator from "@/components/HeritageSeparator";
 
@@ -43,6 +43,33 @@ const galleryPreview = [
   "/gallery/outer-view/2.jpg",
   "/gallery/parking/1.jpg",
 ];
+
+const stats = [
+  { target: 1000, suffix: "+", label: "Happy Clients", icon: SmilePlus },
+  { target: 500, suffix: "+", label: "Happy Celebrations", icon: CalendarCheck },
+  { target: 800, suffix: "+", label: "Five Star Ratings", icon: Star },
+  { target: 200, suffix: "+", label: "Served Occasions", icon: Trophy },
+];
+
+const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    let start = 0;
+    const step = Math.ceil(target / (2000 / 16));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { setCount(target); clearInterval(timer); }
+      else setCount(start);
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, target]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+};
 
 const Index = () => {
   const [slide, setSlide] = useState(0);
@@ -223,16 +250,13 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <p className="text-center text-xs tracking-[0.4em] uppercase text-gold/60 font-subheading mb-8">Our Achievements</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { value: "18+", label: "Happy Clients", icon: SmilePlus },
-              { value: "91+", label: "Happy Celebrations", icon: CalendarCheck },
-              { value: "146+", label: "Five Star Ratings", icon: Star },
-              { value: "183+", label: "Served Occasions", icon: Trophy },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <motion.div key={stat.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
                 className="text-center p-6 border border-gold/20 bg-white/5 backdrop-blur-sm">
                 <stat.icon className="w-7 h-7 mx-auto mb-3 text-gold/70" />
-                <span className="font-heading text-4xl md:text-5xl font-bold text-gold block">{stat.value}</span>
+                <span className="font-heading text-4xl md:text-5xl font-bold text-gold block">
+                  <CountUp target={stat.target} suffix={stat.suffix} />
+                </span>
                 <div className="w-8 h-px bg-gold/40 mx-auto my-2" />
                 <p className="text-gold-light/70 text-sm">{stat.label}</p>
               </motion.div>

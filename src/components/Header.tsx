@@ -57,8 +57,8 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
         <Link to="/" className="flex flex-col items-center">
-          <span className="font-heading text-xl md:text-2xl font-bold tracking-wider text-gold">Sudeeksha</span>
-          <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-gold-light/70">Convention Centre</span>
+          <span className="font-heading text-xl md:text-2xl font-bold tracking-wider text-gold">SUDEEKSHA</span>
+          <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-gold-light/70">COMPLETE CONVENTION CENTRE</span>
         </Link>
 
         {/* Desktop Nav */}
