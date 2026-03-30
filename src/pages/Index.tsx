@@ -113,7 +113,7 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="font-heading text-xl md:text-2xl tracking-[0.2em] text-gold-light/80 mb-3"
           >
-            Convention Centre
+            Complete Convention Centre
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
@@ -168,7 +168,7 @@ const Index = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}
               className="w-full aspect-video gold-border-thick overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/gOGRQRSLrRw?si=xC8pmD7DGK7xM4iA"
+                src="https://www.youtube.com/embed/jtQu2fovyTo"
                 title="Sudeeksha Convention Centre"
                 width="100%"
                 height="100%"
