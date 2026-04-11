@@ -1,10 +1,15 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
 import heroImg from "/gallery/function-hall/1.jpg";
 import { toast } from "sonner";
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const eventTypes = [
   "Wedding Ceremony",
@@ -18,13 +23,22 @@ const eventTypes = [
 
 const Booking = () => {
   const [form, setForm] = useState({
-    name: "", phone: "", email: "", eventType: "", eventDate: "", guests: "", message: "",
+    name: "", phone: "", email: "", event_type: "", event_date: "", guests: "", message: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We will contact you shortly to confirm your booking.");
-    setForm({ name: "", phone: "", email: "", eventType: "", eventDate: "", guests: "", message: "" });
+    setLoading(true);
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY);
+      toast.success("Thank you! We will contact you shortly to confirm your booking.");
+      setForm({ name: "", phone: "", email: "", event_type: "", event_date: "", guests: "", message: "" });
+    } catch {
+      toast.error("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -51,7 +65,7 @@ const Booking = () => {
               {[
                 { name: "name", label: "Full Name", type: "text", placeholder: "Your full name" },
                 { name: "phone", label: "Phone Number", type: "tel", placeholder: "+91 XXXXX XXXXX" },
-                { name: "email", label: "Email Address", type: "email", placeholder: "your@email.com" },
+                { name: "email", label: "Email Address", type: "email", placeholder: "<your@email.com>" },
               ].map((field) => (
                 <div key={field.name}>
                   <label className="block font-heading text-xs tracking-widest uppercase text-primary mb-2">{field.label}</label>
@@ -70,8 +84,8 @@ const Booking = () => {
               <div>
                 <label className="block font-heading text-xs tracking-widest uppercase text-primary mb-2">Event Type</label>
                 <select
-                  name="eventType"
-                  value={form.eventType}
+                  name="event_type"
+                  value={form.event_type}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-background border-2 border-gold/30 text-foreground focus:border-gold focus:outline-none transition-colors font-body"
@@ -86,8 +100,8 @@ const Booking = () => {
                   <label className="block font-heading text-xs tracking-widest uppercase text-primary mb-2">Event Date</label>
                   <input
                     type="date"
-                    name="eventDate"
-                    value={form.eventDate}
+                    name="event_date"
+                    value={form.event_date}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-background border-2 border-gold/30 text-foreground focus:border-gold focus:outline-none transition-colors font-body"
@@ -121,10 +135,11 @@ const Booking = () => {
 
               <button
                 type="submit"
-                className="w-full py-4 heritage-gradient border-2 border-gold text-gold font-heading text-sm tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                disabled={loading}
+                className="w-full py-4 heritage-gradient border-2 border-gold text-gold font-heading text-sm tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4" />
-                Submit Booking
+                {loading ? "Sending..." : "Submit Booking"}
               </button>
             </div>
           </motion.form>

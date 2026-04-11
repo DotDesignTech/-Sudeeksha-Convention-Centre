@@ -96,33 +96,38 @@ const Index = () => {
         ))}
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 text-center px-4">
-          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <span className="inline-block text-xs tracking-[0.4em] uppercase text-gold-light/70 mb-4 font-subheading">Welcome to</span>
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-gold mb-2 drop-shadow-lg"
+            transition={{ duration: 1 }}
+            className="inline-block bg-black/50 backdrop-blur-sm border-2 border-gold/70 rounded-2xl px-10 py-8 mb-6"
           >
-            Sudeeksha
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="font-heading text-xl md:text-2xl tracking-[0.2em] text-gold-light/80 mb-3"
-          >
-            Complete Convention Centre
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="font-subheading text-base md:text-lg text-gold-light/60 italic mb-8 max-w-xl mx-auto"
-          >
-            A Royal Destination for Weddings &amp; Celebrations
-          </motion.p>
+            <span className="inline-block text-xs tracking-[0.4em] uppercase text-gold-light/80 mb-4 font-subheading">Welcome to</span>
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-gold mb-2 drop-shadow-lg"
+            >
+              Sudeeksha
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="font-heading text-xl md:text-2xl tracking-[0.2em] text-gold-light mb-3"
+            >
+              Complete Convention Centre
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.7 }}
+              className="font-subheading text-base md:text-lg text-gold-light/80 italic max-w-xl mx-auto"
+            >
+              A Royal Destination for Weddings &amp; Celebrations
+            </motion.p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,7 +137,7 @@ const Index = () => {
             <Link to="/booking" className="px-8 py-3 heritage-gradient border-2 border-gold text-gold font-heading text-sm tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300">
               Book Your Event
             </Link>
-            <Link to="/gallery" className="px-8 py-3 bg-transparent border-2 border-gold/60 text-gold-light font-heading text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300">
+            <Link to="/gallery" className="px-8 py-3 heritage-gradient border-2 border-gold text-gold font-heading text-sm tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300">
               Explore Gallery
             </Link>
           </motion.div>
