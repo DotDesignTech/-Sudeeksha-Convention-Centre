@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -11,17 +12,17 @@ const venues = [
   {
     title: "Grand Wedding Hall",
     desc: "Our magnificent ballroom with gorgeous chandeliers, beautiful high ceilings, and modern upscale decor. Capacity up to 1500 guests for grand celebrations.",
-    images: ["/gallery/function-hall/1.jpg", "/gallery/function-hall/2.jpg", "/gallery/function-hall/3.jpg"],
+    images: ["/gallery/function-hall/1.webp", "/gallery/function-hall/2.webp", "/gallery/function-hall/3.webp"],
   },
   {
     title: "Dining Hall",
     desc: "A lavish dining space with elegant buffet arrangements. Our expert chefs prepare exquisite multi-cuisine menus tailored to your preferences.",
-    images: ["/gallery/dining/1.jpg", "/gallery/dining/2.jpg", "/gallery/dining/3.jpg"],
+    images: ["/gallery/dining/1.webp", "/gallery/dining/2.webp", "/gallery/dining/3.webp"],
   },
   {
     title: "Guest Rooms",
     desc: "14 well-appointed guest rooms featuring traditional Indian decor with modern amenities. Perfect for out-of-town guests attending your celebration.",
-    images: ["/gallery/rooms/1.jpg", "/gallery/rooms/2.jpg", "/amenities/rooms.jpg"],
+    images: ["/gallery/rooms/1.jpg", "/gallery/rooms/2.jpg", "/amenities/rooms.webp"],
   },
   {
     title: "Parking Area",
@@ -32,6 +33,7 @@ const venues = [
 
 const Venue = () => (
   <div>
+    <SEO title="Explore Our Venue" description="Explore Sudeeksha Convention Centre’s grand wedding hall, dining hall, 14 guest rooms and 80+ car parking – all on Magadi Main Road, Bengaluru." canonical="/venue" />
     <PageHero title="Explore Our Venue" subtitle="Every corner designed for royal celebrations" image="/gallery/outer-view/1.jpg" />
 
     <section className="section-padding heritage-pattern">

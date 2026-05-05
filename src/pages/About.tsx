@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Crown, Users, BedDouble, Utensils, Sparkles } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,6 +18,7 @@ const features = [
 
 const About = () => (
   <div>
+    <SEO title="About Us" description="Learn about Sudeeksha Convention Centre – Bangalore’s premier wedding and events venue on Magadi Main Road, hosting celebrations for 25 to 1500 guests." canonical="/about" />
     <PageHero title="About Us" subtitle="The story behind Bangalore's most prestigious celebration venue" image="/img/about.jpg" />
 
     {/* Our Story */}
@@ -76,9 +78,9 @@ const About = () => (
         <HeritageSeparator />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
           {[
-            { img: "/gallery/function-hall/1.jpg", label: "Grand Ballroom" },
-            { img: "/gallery/dining/df.jpg", label: "Dining Hall" },
-            { img: "/amenities/rooms.jpg", label: "Guest Rooms" },
+            { img: "/gallery/function-hall/1.webp", label: "Grand Ballroom" },
+            { img: "/gallery/dining/df.webp", label: "Dining Hall" },
+            { img: "/amenities/rooms.webp", label: "Guest Rooms" },
           ].map((item, i) => (
             <motion.div key={item.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
               className="relative overflow-hidden gold-border group">

@@ -36,9 +36,9 @@ const highlights = [
 const heroSlides = ["/img/about.jpg", "/img/s2.jpg"];
 
 const galleryPreview = [
-  "/gallery/function-hall/1.jpg",
-  "/gallery/function-hall/4.jpg",
-  "/gallery/dining/1.jpg",
+  "/gallery/function-hall/1.webp",
+  "/gallery/function-hall/4.webp",
+  "/gallery/dining/1.webp",
   "/gallery/rooms/1.jpg",
   "/gallery/outer-view/2.jpg",
   "/gallery/parking/1.jpg",
@@ -71,6 +71,8 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
   return <span ref={ref}>{count}{suffix}</span>;
 };
 
+import SEO from "@/components/SEO";
+
 const Index = () => {
   const [slide, setSlide] = useState(0);
 
@@ -81,6 +83,11 @@ const Index = () => {
 
   return (
     <div>
+      <SEO
+        title="Wedding & Events Venue in Bengaluru"
+        description="Sudeeksha Convention Centre – Premier wedding and events venue on Magadi Main Road, Bengaluru. Host weddings, receptions, corporate events & more for up to 1500 guests."
+        canonical="/"
+      />
       {/* Hero */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         {heroSlides.map((src, i) => (

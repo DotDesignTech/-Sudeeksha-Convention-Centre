@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -16,25 +17,25 @@ const images = [
   { src: "/gallery/outer-view/3.jpg", cat: "Exterior" },
   { src: "/gallery/outer-view/4.jpg", cat: "Exterior" },
   { src: "/gallery/outer-view/5.jpg", cat: "Exterior" },
-  { src: "/gallery/function-hall/1.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/2.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/3.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/4.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/5.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/6.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/7.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/8.jpg", cat: "Function Hall" },
-  { src: "/gallery/function-hall/9.jpg", cat: "Function Hall" },
-  { src: "/gallery/dining/1.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/2.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/3.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/4.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/5.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/6.jpg", cat: "Dining Area" },
-  { src: "/gallery/dining/7.jpg", cat: "Dining Area" },
+  { src: "/gallery/function-hall/1.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/2.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/3.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/4.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/5.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/6.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/7.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/8.webp", cat: "Function Hall" },
+  { src: "/gallery/function-hall/9.webp", cat: "Function Hall" },
+  { src: "/gallery/dining/1.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/2.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/3.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/4.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/5.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/6.webp", cat: "Dining Area" },
+  { src: "/gallery/dining/7.webp", cat: "Dining Area" },
   { src: "/gallery/rooms/1.jpg", cat: "Guest Rooms" },
   { src: "/gallery/rooms/2.jpg", cat: "Guest Rooms" },
-  { src: "/amenities/rooms.jpg", cat: "Guest Rooms" },
+  { src: "/amenities/rooms.webp", cat: "Guest Rooms" },
   { src: "/gallery/parking/1.jpg", cat: "Parking" },
   { src: "/gallery/parking/2.jpg", cat: "Parking" },
   { src: "/gallery/parking/3.jpg", cat: "Parking" },
@@ -50,7 +51,8 @@ const Gallery = () => {
 
   return (
     <div>
-      <PageHero title="Our Gallery" subtitle="A visual journey through royal celebrations" image="/gallery/function-hall/1.jpg" />
+      <SEO title="Gallery" description="Browse photos of Sudeeksha Convention Centre – function hall, dining area, guest rooms, parking and exterior views of our wedding venue in Bengaluru." canonical="/gallery" />
+      <PageHero title="Our Gallery" subtitle="A visual journey through royal celebrations" image="/gallery/function-hall/1.webp" />
 
       <section className="section-padding heritage-pattern">
         <div className="container mx-auto">
