@@ -3,9 +3,11 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
 import heroImg from "/img/about.jpg";
+import SEO from "@/components/SEO";
 
 const Contact = () => (
   <div>
+    <SEO title="Contact Us" description="Contact Sudeeksha Convention Centre at No 460/11, Magadi Main Road, Kottigepalya, Bengaluru – 560091. Call +91 8123923161 or email us to plan your event." canonical="/contact" />
     <PageHero title="Contact Us" subtitle="We'd love to help you plan your celebration" image={heroImg} />
 
     <section className="section-padding heritage-pattern">

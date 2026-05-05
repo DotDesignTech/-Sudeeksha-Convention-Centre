@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
 import heroImg from "/gallery/function-hall/1.jpg";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -47,6 +48,7 @@ const Booking = () => {
 
   return (
     <div>
+      <SEO title="Book Your Event" description="Book Sudeeksha Convention Centre for your wedding, reception, birthday, corporate event or any celebration in Bengaluru. Contact us to check availability." canonical="/booking" />
       <PageHero title="Book Your Event" subtitle="Begin your journey to a royal celebration" image={heroImg} />
 
       <section className="section-padding heritage-pattern">
