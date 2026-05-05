@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,18 +13,19 @@ const items = [
   {
     title: "Conferences",
     desc: "Corporate conferences are events that are attended by eminent business men and women and other professionals. Make sure you choose a convention hall that elevates the standard of your conference by providing your professional delegates with a space that gives them a feel of professionalism. We will make sure that the services that we render are professional as well.",
-    image: "/services/conferences.jpg",
+    image: "/services/conferences.webp",
   },
   {
     title: "Meetings",
     desc: "While conducting a formal meeting, you need to keep in mind the kind of gathering that will attend the meeting. When you choose Sudeeksha, you will be a great hospitality business that renders services based on your requirements. You can take advantage of a clean space and an air conditioned hall to make your guests feel comfortable. You will surely be provided with business-like services.",
-    image: "/services/meetings.jpg",
+    image: "/services/meetings.webp",
   },
 ];
 
 const Corporate = () => (
   <div>
-    <PageHero title="Corporate" subtitle="Professional spaces for impactful corporate events and meetings" image="/services/conferences.jpg" />
+    <SEO title="Corporate Events" description="Host professional conferences and meetings at Sudeeksha Convention Centre, Bengaluru. Air-conditioned halls with modern AV setup for corporate events." canonical="/services/corporate" />
+    <PageHero title="Corporate" subtitle="Professional spaces for impactful corporate events and meetings" image="/services/conferences.webp" />
     <section className="section-padding heritage-pattern">
       <div className="container mx-auto max-w-6xl">
         <HeritageSeparator />

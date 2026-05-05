@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,28 +13,29 @@ const items = [
   {
     title: "Cradle Ceremonies",
     desc: "Another tradition is to decorate the cradle with the wedding saree of the mother. First a small statue of Lord Krishna is placed inside the cradle and then the baby is placed in the cradle.\n\nDuring your cradle ceremony, one of the most important facilities that need to be included is the availability of green rooms. Sudeeksha provides green room facilities as well. Our green rooms are clean and safe. Our space is eco-friendly and you will be provided with top-class facilities.",
-    image: "/services/cradle-ceremonies.jpg",
+    image: "/services/cradle-ceremonies.webp",
   },
   {
     title: "Birthday Parties",
     desc: "When we celebrate a first birthday we are celebrating the miracle of birth and the unique person who was brought into the world on that day. A first birthday celebration is particularly precious because as we reflect on the previous year we think about just how tiny and new they were and how far they have come.\n\nNo matter the type of event, our convention halls are spacious and can accommodate around 800-1000 people. You'll also be provided with a sound system to make your birthday bash a vibrant one. With all the fun, excitement and food that is served at a clean space, you're sure to have the best birthday bash.",
-    image: "/services/birthday-party.jpg",
+    image: "/services/birthday-party.webp",
   },
   {
     title: "Shasti Abda Poorthi",
     desc: "Want to celebrate a 60 years anniversary? Sudeeksha Convention Centre is the best that boasts of an amazing interiors, large free parking space.",
-    image: "/services/shasti-abda-poorthi.jpg",
+    image: "/services/shasti-abda-poorthi.webp",
   },
   {
     title: "Anniversary Parties",
     desc: "Whether you're celebrating your 25th or your 60th anniversary, Sudeeksha offers luxury and pocket friendly venues to celebrate your anniversary.\n\nYou'll surely get carried away with the kind of services that we provide. It is important to ensure that the Sudeeksha venues that you choose has all the facilities that you're looking for without bargaining on the health factor of any guest that participates in your event.",
-    image: "/services/anniversary-party.jpg",
+    image: "/services/anniversary-party.webp",
   },
 ];
 
 const OtherEvents = () => (
   <div>
-    <PageHero title="Other Events" subtitle="Every occasion deserves a royal celebration" image="/services/anniversary-party.jpg" />
+    <SEO title="Other Events" description="Host cradle ceremonies, birthday parties, Shasti Abda Poorthi and anniversary parties at Sudeeksha Convention Centre, Bengaluru." canonical="/services/other-events" />
+    <PageHero title="Other Events" subtitle="Every occasion deserves a royal celebration" image="/services/anniversary-party.webp" />
     <section className="section-padding heritage-pattern">
       <div className="container mx-auto max-w-6xl">
         <HeritageSeparator />

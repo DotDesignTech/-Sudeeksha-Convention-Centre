@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,23 +13,24 @@ const items = [
   {
     title: "New Year Parties",
     desc: "New Year is one such event that needs to be celebrated with enthusiasm and joy. An event like this will be successful only when the space at which the event is happening is of good quality and satisfies every requirement. Sudeeksha provides hospitality services that are exemplary.",
-    image: "/services/new-year-parties.jpg",
+    image: "/services/new-year-parties.webp",
   },
   {
     title: "Holi",
     desc: "Choosing the right venue for your Holi party can make it much more comfortable and a lot less stressful. Located at a beautiful location, Sudeeksha Convention Centre can be a unanimous choice for variety of functions. Sudeeksha Convention Centre can cater to all your needs and give you a worthwhile experience.",
-    image: "/services/holi.jpg",
+    image: "/services/holi.webp",
   },
   {
     title: "Dasara",
     desc: "Sudeeksha also offers venues for the occasion of Dasara. Dasara is a traditional festival that is celebrated for nine days. A festival that is celebrated with dandiya and arrangement of idols requires a venue that supports the required type of arrangement.\n\nThe safety and security of you and your family is assured when you choose to work with us. You will also be provided with an inbuilt stage on the occasion of your festive celebration.",
-    image: "/services/dasara.jpg",
+    image: "/services/dasara.webp",
   },
 ];
 
 const OccasionalEvents = () => (
   <div>
-    <PageHero title="Occasional Events" subtitle="Festive celebrations crafted with joy and grandeur" image="/services/new-year-parties.jpg" />
+    <SEO title="Occasional Events" description="Celebrate New Year, Holi, Dasara and other festive occasions at Sudeeksha Convention Centre, Bengaluru. Grand venue for all your festive celebrations." canonical="/services/occasional-events" />
+    <PageHero title="Occasional Events" subtitle="Festive celebrations crafted with joy and grandeur" image="/services/new-year-parties.webp" />
     <section className="section-padding heritage-pattern">
       <div className="container mx-auto max-w-6xl">
         <HeritageSeparator />

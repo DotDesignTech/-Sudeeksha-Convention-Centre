@@ -10,12 +10,12 @@ const fadeUp = {
 };
 
 const events = [
-  { title: "Wedding", image: "/services/wedding.jpg" },
-  { title: "Reception", image: "/services/reception-party.jpg" },
-  { title: "Anniversary", image: "/services/anniversary-party.jpg" },
-  { title: "Birthday", image: "/services/birthday-party.jpg" },
-  { title: "Mehendi Ceremony", image: "/services/mehndi-ceremony-other-social-events.jpg" },
-  { title: "Corporate Events", image: "/services/conferences.jpg" },
+  { title: "Wedding", image: "/services/wedding.webp" },
+  { title: "Reception", image: "/services/reception-party.webp" },
+  { title: "Anniversary", image: "/services/anniversary-party.webp" },
+  { title: "Birthday", image: "/services/birthday-party.webp" },
+  { title: "Mehendi Ceremony", image: "/services/mehndi-ceremony-other-social-events.webp" },
+  { title: "Corporate Events", image: "/services/conferences.webp" },
 ];
 
 const whyUs = [
