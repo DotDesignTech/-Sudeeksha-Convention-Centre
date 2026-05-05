@@ -45,7 +45,7 @@ const items = [
 const Wedding = () => (
   <div>
     <SEO title="Wedding Services" description="Plan your dream wedding at Sudeeksha Convention Centre, Bengaluru. We host wedding ceremonies, receptions, sangeeth, mehendi, engagement & bride-groom ceremonies." canonical="/services/wedding" />
-    <PageHero title="Wedding" subtitle="Celebrate love with royal elegance and timeless traditions" image="/services/bride-groom-ceremony.jpg" />
+    <PageHero title="Wedding" subtitle="Celebrate love with royal elegance and timeless traditions" image="/services/bride-groom-ceremony.webp" />
     <section className="section-padding heritage-pattern">
       <div className="container mx-auto max-w-6xl">
         <HeritageSeparator />
