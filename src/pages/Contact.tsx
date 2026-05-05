@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import HeritageSeparator from "@/components/HeritageSeparator";
-import heroImg from "/img/about.jpg";
+import heroImg from "/img/about.webp";
 import SEO from "@/components/SEO";
 
 const Contact = () => (

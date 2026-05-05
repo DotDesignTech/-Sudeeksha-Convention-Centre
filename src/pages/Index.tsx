@@ -33,7 +33,7 @@ const highlights = [
   { icon: Zap, value: "24/7", label: "Power Backup" },
 ];
 
-const heroSlides = ["/img/about.jpg", "/img/s2.jpg"];
+const heroSlides = ["/img/about.webp", "/img/s2.webp"];
 
 const galleryPreview = [
   "/gallery/function-hall/1.webp",

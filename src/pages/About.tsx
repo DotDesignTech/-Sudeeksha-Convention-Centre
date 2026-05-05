@@ -19,7 +19,7 @@ const features = [
 const About = () => (
   <div>
     <SEO title="About Us" description="Learn about Sudeeksha Convention Centre – Bangalore’s premier wedding and events venue on Magadi Main Road, hosting celebrations for 25 to 1500 guests." canonical="/about" />
-    <PageHero title="About Us" subtitle="The story behind Bangalore's most prestigious celebration venue" image="/img/about.jpg" />
+    <PageHero title="About Us" subtitle="The story behind Bangalore's most prestigious celebration venue" image="/img/about.webp" />
 
     {/* Our Story */}
     <section className="section-padding heritage-pattern">
